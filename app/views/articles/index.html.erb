@@ -1,0 +1,9 @@
+<table>
+    <th>TITLE</th><th>BODY</th>
+    <% @articles.each do |article| %>
+    <tr>
+        <td style="text-decoration: solid;color: blue;"> <%= article.title %></td>
+        <td style="font-style: italic;font-size: 12pt;"> <%= article.body %></td>
+    </tr>
+    <% end %>
+</table>
