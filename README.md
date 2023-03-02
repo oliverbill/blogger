@@ -2,7 +2,7 @@
 
 User stories:
 
-As the Blog Administrator, I want to add new posts to the blog along with its timestamp and comments, so that other people can access and comment them through the web
+As the Blog Administrator, I want to add new posts through a form along with their timestamp and comments, so that other people can access them and comment them through the web
 
 As the Blog Administrator, I want to edit posts so that mistakes and new information can be added to them
 
