@@ -1,0 +1,38 @@
+<table class="center-table">
+    <th>TITLE</th><th>BODY</th>
+    <% @articles.each do |article| %>
+    <tr>
+        <td> 
+        <a href="<%= article_path(article) %>"><%= article.title %></a>
+        <td class="comment"> <%= article.body %></td>
+    </tr>
+    <% end %>
+</table>
+
+<h2 class="center">COMMENTS</h2>
+<table class="center-table">    
+    <th>AUTHOR</th><th>COMMENT</th>
+    <% @article.comments.each do |comment| %>
+    <tr>
+        <td><%= comment.author %></td>
+        <td><%= comment.content %></td>
+    </tr>
+    <% end %>
+</table>
+
+<div class="center">
+    <h2>Add a comment:</h2>
+    <%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p>
+        <%= form.label :author %><br>
+        <%= form.text_field :author %>
+    </p>
+    <p>
+        <%= form.label :content %><br>
+        <%= form.text_area :content %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+    <% end %>
+</div>
